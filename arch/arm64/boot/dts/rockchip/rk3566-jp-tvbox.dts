@@ -119,42 +119,6 @@
 			press-threshold-microvolt = <1305500>;
 		};
 	};
-	bt-sound {
-               compatible = "simple-audio-card";
-               simple-audio-card,format = "dsp_b";
-               simple-audio-card,bitclock-inversion = <0>;
-               simple-audio-card,mclk-fs = <256>;
-               simple-audio-card,name = "rockchip,bt";
-               simple-audio-card,bitclock-master = <&sound2_master>;
-               simple-audio-card,frame-master = <&sound2_master>;
-               simple-audio-card,cpu {
-                       sound-dai = <&i2s2_2ch>;
-               };
-               sound2_master:simple-audio-card,codec {
-                       sound-dai = <&bt_sco>;
-               };
-       };
- 
-       bt_sco: bt-sco {
-               compatible = "delta,dfbmcs320";
-               #sound-dai-cells = <0>;
-               status = "okay";
-       };	
-    
-	&i2s2_2ch{
-		pinctrl-0 = <&i2s2m0_sclktx &i2s2m0_lrcktx &i2s2m0_sdi &i2s2m0_sdo>;
-		rockchip,bclk-fs =<32>;
-		#sound-dai-cells = <0>;
-		rockchip,clk-trcm = <1>;
-
-		status = "okay";
-	};
-
-	&rk809_codec{
-		status = "okay";
-	    spk-mute-delay-ms = <10>;
-	    hp-mute-delay-ms = <10>;
-	};
 
 	hdmi_sound: hdmi-sound {
 		compatible = "simple-audio-card";
