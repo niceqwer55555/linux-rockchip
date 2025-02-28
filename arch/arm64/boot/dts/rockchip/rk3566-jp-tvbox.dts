@@ -146,7 +146,7 @@
 		simple-audio-card,frame-master = <&sound2_master>;
 		simple-audio-card,cpu {
    
-			sound-dai = <&i2s2_2ch>;
+			sound-dai = <&i2s0_8ch>;
 		};
 		sound2_master:simple-audio-card,codec {
    
@@ -169,7 +169,7 @@ bt-sound {
 		simple-audio-card,name = "rockchip,bt";
 		simple-audio-card,cpu {
    
-			sound-dai = <&i2s2_2ch>;
+			sound-dai = <&i2s0_8ch>;
 		};
 		simple-audio-card,codec {
    
