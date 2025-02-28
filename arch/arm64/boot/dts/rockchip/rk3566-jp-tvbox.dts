@@ -160,7 +160,7 @@
 		#sound-dai-cells = <0>;
 		status = "okay";
 	};
-bt-sound {
+	bt-sound {
    
 		compatible = "simple-audio-card";
 		simple-audio-card,format = "dsp_b";
